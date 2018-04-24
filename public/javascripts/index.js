@@ -59,5 +59,5 @@ $(document).ready(function () {
         map.getSource('route').setData(coordinateData);
         map.panTo(coordinateData[coordinateData.length - 1]);
 
-    }, 10);
+    }, 200);
 });
