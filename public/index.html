@@ -1,11 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <title>Vehicle DashBoard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="javascripts/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="javascripts/Chart.min.js" type="text/javascript" charset="utf-8"></script>
-
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
     <link href="stylesheets/style.css" rel="stylesheet" />
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet" />
+    <script src="javascripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
     <script>
         function redraw()
         {
@@ -94,11 +98,26 @@
     </script>
 </head>
 
-<body onload="draw(120);">
+<body onload="draw(0);">
     <h1 style="text-align: center">Vehicle Dashboard</h1><br><br><br><br><br>
-    <canvas class="canvas" id="myCanvas" width="600" height="600">Speedometer</canvas>
-    <iframe width="600" height="450" frameborder="0" style="border:0;float:right"
-            src="https://www.google.com/maps/embed/v1/place?q=shiv+nadar+university&key=AIzaSyBEkrFgk93oexBRyWdLK-mufZB-bMZGkqU" allowfullscreen></iframe>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <canvas class="canvas" id="myCanvas" width="600" height="600">Speedometer</canvas>
+                <p>Speedometer Gauge</p>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div id='map' style='width: 50em; height: 60em; '></div>
+                <script>
+                    mapboxgl.accessToken = 'pk.eyJ1IjoiYW1yOTciLCJhIjoiY2pnZGNtZTZiMDdhNTJ4cWFheHo2MTcxbSJ9.HbYDR0RfFKdul5e7xIAunA';
+                    var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/mapbox/streets-v10'
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
     <script src="javascripts/index.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
