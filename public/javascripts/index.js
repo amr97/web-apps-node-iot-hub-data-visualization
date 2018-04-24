@@ -55,4 +55,9 @@ $(document).ready(function () {
       console.error(err);
     }
   }
+    var timer = window.setInterval(function() {
+        map.getSource('route').setData(coordinateData);
+        map.panTo(coordinateData[coordinateData.length - 1]);
+
+    }, 10);
 });
