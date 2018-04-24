@@ -4,6 +4,17 @@ body {
   margin: 0;
 }
 
+html {
+    height: 100%;
+}
+
 a {
   color: #00B7FF;
+}
+
+body {
+    background-image: url("http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSquares_1920x1234.jpg");
+    -webkit-background-image: url("http://blog.hostbaby.com/wp-content/uploads/2014/03/PaintSquares_1920x1234.jpg");
+    background-position: center;
+    background-repeat: repeat;
 }

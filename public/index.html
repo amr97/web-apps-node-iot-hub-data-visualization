@@ -94,20 +94,21 @@
             context.closePath();
             context.restore();
             context.translate(-centerX,-centerY);
+            context.font = "50px Monotype Corsiva";
+            context.fillText("Speedometer Gauge",canvas.width-470,canvas.height-150);
         }
     </script>
 </head>
 
 <body onload="draw(0);">
-    <h1 style="text-align: center">Vehicle Dashboard</h1><br><br><br><br><br>
+    <h1 style="text-align: center; color: #16181b; font-family: 'Monotype Corsiva'; font-size: 5em">Vehicle Dashboard</h1><br><br><br><br><br>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <canvas class="canvas" id="myCanvas" width="600" height="600">Speedometer</canvas>
-                <p>Speedometer Gauge</p>
+            <div class="col-md-6">
+                <canvas class="canvas" id="myCanvas" width="600" height="600"></canvas>
             </div>
-            <div class="col-lg-6 col-md-6">
-                <div id='map' style='width: 50em; height: 60em; '></div>
+            <div class="col-md-6">
+                <div id='map' style='width: 50em; height: 51em; border:5px inset #ffffff;'></div>
                 <script>
                     mapboxgl.accessToken = 'pk.eyJ1IjoiYW1yOTciLCJhIjoiY2pnZGNtZTZiMDdhNTJ4cWFheHo2MTcxbSJ9.HbYDR0RfFKdul5e7xIAunA';
                     var map = new mapboxgl.Map({
