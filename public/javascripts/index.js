@@ -37,8 +37,9 @@ $(document).ready(function () {
               "line-cap": "round"
           },
           "paint": {
-              "line-color": "#888",
-              "line-width": 8
+              "line-color": "yellow",
+              "line-opacity": 0.75,
+              "line-width": 5
           }
       });
   });
@@ -56,8 +57,19 @@ $(document).ready(function () {
     }
   }
     var timer = window.setInterval(function() {
-        map.getSource('route').setData(coordinateData);
-        map.panTo(coordinateData[coordinateData.length - 1]);
+            map.getSource('route').setData({
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": coordinateData
+                }
+            });
+            map.panTo(coordinateData[coordinateData.length-1],{
+            "duration": 200,
+            "animate": true
+        });
 
-    }, 200);
+
+    }, 2000);
 });
