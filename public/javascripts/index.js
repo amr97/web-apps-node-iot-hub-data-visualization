@@ -13,7 +13,7 @@ $(document).ready(function () {
   mapboxgl.accessToken = 'pk.eyJ1IjoiYW1yOTciLCJhIjoiY2pnZGNtZTZiMDdhNTJ4cWFheHo2MTcxbSJ9.HbYDR0RfFKdul5e7xIAunA';
   var map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v10',
+      style: 'mapbox://styles/amr97/cjgfeof04003b2tnziebmczx3',
       center: [77.575947,28.526013],
       zoom: 17
   });
@@ -37,7 +37,7 @@ $(document).ready(function () {
               "line-cap": "round"
           },
           "paint": {
-              "line-color": "yellow",
+              "line-color": "red",
               "line-opacity": 0.75,
               "line-width": 5
           }
